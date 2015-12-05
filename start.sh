@@ -1,6 +1,8 @@
 #!/bin/bash
+. /etc/clientcustomizations/lib/log.sh
 
-for script in /etc/anmeldescripte/scripts/*
+for script in /etc/clientcustomizations/scripts/*
 do
-	sh $script &
+  log "Try to execute $script"
+  sh $script &
 done
