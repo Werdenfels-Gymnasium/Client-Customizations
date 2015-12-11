@@ -4,5 +4,5 @@
 for script in /etc/clientcustomizations/scripts/*
 do
   log "Try to execute $script"
-  sh $script &
+  bash $script &
 done
