@@ -1,7 +1,7 @@
 #!/bin/bash
 . /etc/clientcustomizations/lib/log.sh
 
-INPUT="../tippdesTages.csv"
+INPUT="/etc/clientcustomizations/tippdesTages.csv"
 OLDIFS=$IFS
 IFS=\;
 images=()
