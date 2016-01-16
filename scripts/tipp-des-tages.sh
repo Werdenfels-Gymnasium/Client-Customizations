@@ -1,7 +1,7 @@
 #!/bin/bash
 . /etc/clientcustomizations/lib/log.sh
 
-INPUT="/etc/clientcustomizations/tippdesTages.csv"
+INPUT="/etc/clientcustomizations/data/tippdesTages.csv"
 OLDIFS=$IFS
 IFS=\;
 images=()
@@ -15,6 +15,6 @@ done < $INPUT
 IFS=$OLDIFS
 tipp=$(($RANDOM % ${#images[@]}))
 
-notify-send  -t 10000 -i "/etc/clientcustomizations/images/${images[$tipp]}" "Tipp des Tages" "${texts[$tipp]}"
+notify-send  -t 10000 -i "/etc/clientcustomizations/data/images/${images[$tipp]}" "Tipp des Tages" "${texts[$tipp]}"
 
 log "Tipp des Tages successfully executed"
